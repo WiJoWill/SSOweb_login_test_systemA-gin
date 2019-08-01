@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>a系统</title>
+    <script src="../static/js/lib/jquery-3.3.1.min.js"></script>
+    <script src="../static/js/lib/jquery.url.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="../static/js/a_user_info.js"></script>
+    <script>
+        /*
+        $(document).ready(function(){
+            $("#change-form").validate({
+                rules:{
+                    new_username: {
+                        required: true,
+                        rangelength: [5, 10]
+                    }
+                },
+                messages:{
+                    new_username: {
+                        required: "新用户名不能为空",
+                        rangelength: "新用户名长度需5-10位"
+                    }
+                }
+            });
+            $("#btn2").click(function() {
+                var new_username = $("#new_username").val();
+                if(new_username.length < 5){
+                    alert("请重新输入符合要求的用户名");
+                    return;
+                }
+                $("#info").text("您设置的新用户名是: " + new_username);
+            })
+        });
+        */
+        window.onload = function(){
+            $("#change-form").validate({
+                rules:{
+                    new_username: {
+                        required: true,
+                        rangelength: [5, 10]
+                    }
+                },
+                messages:{
+                    new_username: {
+                        required: "新用户名不能为空",
+                        rangelength: "新用户名长度需5-10位"
+                    }
+                }
+            });
+            $("#btn2").click(function() {
+                var new_username = $("#new_username").val();
+                if(new_username.length < 5){
+                    alert("请重新输入符合要求的用户名");
+                    return;
+                }
+                $("#info").text("您设置的新用户名是: " + new_username);
+                return false;
+            })
+            $.ajax({
+                url: "/",//请求地址
+                dataType: "json",//数据格式
+                type: "post",//请求方式
+                async: false,//是否异步请求
+                success: function (data) { //如何发送成功
+                    var html = JSON.stringify(data.UserInfo);
+                    $("#info").html(html);
+                },
+            })
+        };
+    </script>
+</head>
+<body>
+    <h1>这是一个a系统，需要token授权</h1>
+    <h1>当你看到以上文字的时候，说明您已经登录成功</h1>
+        <!--p><input id="btn1" type="button" value="显示当前登录用户的个人信息" function="click"></p-->
+    <!--button id="btn1">显示当前用户信息</button-->
+    <form action="" id="change-form">
+        <div id="info"></div>
+        <h2>新用户名</h2>
+        <input type="text" id="new_username" value="" name="new_username" placehoder="请输入新用户名">
+        <button id="btn2">设置用户名</button>
+    </form>
+</body>
+</html>
