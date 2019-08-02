@@ -8,32 +8,6 @@
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="../static/js/a_user_info.js"></script>
     <script>
-        /*
-        $(document).ready(function(){
-            $("#change-form").validate({
-                rules:{
-                    new_username: {
-                        required: true,
-                        rangelength: [5, 10]
-                    }
-                },
-                messages:{
-                    new_username: {
-                        required: "新用户名不能为空",
-                        rangelength: "新用户名长度需5-10位"
-                    }
-                }
-            });
-            $("#btn2").click(function() {
-                var new_username = $("#new_username").val();
-                if(new_username.length < 5){
-                    alert("请重新输入符合要求的用户名");
-                    return;
-                }
-                $("#info").text("您设置的新用户名是: " + new_username);
-            })
-        });
-        */
         window.onload = function(){
             $("#change-form").validate({
                 rules:{

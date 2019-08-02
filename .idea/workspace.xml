@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d70fe432-4b09-42c0-ab54-c5e6afb73e4f" name="Default Changelist" comment="" />
+    <list default="true" id="d70fe432-4b09-42c0-ab54-c5e6afb73e4f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/README" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/a_controller/a_controller.go" beforeDir="false" afterPath="$PROJECT_DIR$/a_controller/a_controller.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/a_view/a.html" beforeDir="false" afterPath="$PROJECT_DIR$/a_view/a.html" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,11 +18,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/a_controller/a_controller.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="181">
-              <caret line="103" column="5" selection-start-line="103" selection-start-column="5" selection-end-line="103" selection-end-column="5" />
+            <state relative-caret-position="-294">
+              <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
               <folding>
                 <element signature="e#288#441#0" expanded="true" />
               </folding>
@@ -52,11 +57,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/a_view/a.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="343">
-              <caret line="52" column="60" selection-start-line="52" selection-start-column="60" selection-end-line="52" selection-end-column="60" />
+            <state relative-caret-position="458">
+              <caret line="55" column="44" lean-forward="true" selection-start-line="55" selection-start-column="44" selection-end-line="55" selection-end-column="44" />
             </state>
           </provider>
         </entry>
@@ -92,15 +97,15 @@
         <option value="$PROJECT_DIR$/../web_login/model/redis_model.go" />
         <option value="$PROJECT_DIR$/a_model/a_redis_model.go" />
         <option value="$PROJECT_DIR$/a_router/router.go" />
-        <option value="$PROJECT_DIR$/a_controller/a_controller.go" />
         <option value="$PROJECT_DIR$/static/js/a_user_info.js" />
         <option value="$PROJECT_DIR$/a_view/a.html" />
+        <option value="$PROJECT_DIR$/a_controller/a_controller.go" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="12" />
-    <option name="y" value="53" />
+    <option name="x" value="-2" />
+    <option name="y" value="99" />
     <option name="width" value="1400" />
     <option name="height" value="783" />
   </component>
@@ -208,7 +213,7 @@
     </recent_temporary>
   </component>
   <component name="ToolWindowManager">
-    <frame x="12" y="53" width="1400" height="783" extended-state="0" />
+    <frame x="-2" y="99" width="1400" height="783" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4976526" visible="true" weight="0.27098674" />
@@ -343,10 +348,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/a_router/router.go">
+    <entry file="file://$PROJECT_DIR$/a_view/a.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        <state relative-caret-position="458">
+          <caret line="55" column="44" lean-forward="true" selection-start-line="55" selection-start-column="44" selection-end-line="55" selection-end-column="44" />
         </state>
       </provider>
     </entry>
@@ -357,13 +362,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/a_controller/a_controller.go">
+    <entry file="file://$PROJECT_DIR$/a_router/router.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="103" column="5" selection-start-line="103" selection-start-column="5" selection-end-line="103" selection-end-column="5" />
-          <folding>
-            <element signature="e#288#441#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="105">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
         </state>
       </provider>
     </entry>
@@ -374,10 +376,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/a_view/a.html">
+    <entry file="file://$PROJECT_DIR$/a_controller/a_controller.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="343">
-          <caret line="52" column="60" selection-start-line="52" selection-start-column="60" selection-end-line="52" selection-end-column="60" />
+        <state relative-caret-position="-294">
+          <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
+          <folding>
+            <element signature="e#288#441#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

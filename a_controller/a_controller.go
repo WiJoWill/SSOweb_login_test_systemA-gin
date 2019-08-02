@@ -40,7 +40,7 @@ func Validate() gin.HandlerFunc{
 			//}
 		}
 		log.Print("get token: ", token)
-
+x
 		/*
 		//检验ip地址是否与登录时的ip地址一致
 		user_ip := c.ClientIP();
@@ -92,7 +92,6 @@ func AGet(c * gin.Context) {
 		a_model.SetTokeninASystem(sub_token, user_claims)
 
 		c.HTML(http.StatusOK, "a.html", gin.H{"title": "a测试页"})
-
 	}
 }
 
