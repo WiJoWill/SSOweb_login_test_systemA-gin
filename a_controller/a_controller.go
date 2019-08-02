@@ -40,22 +40,6 @@ func Validate() gin.HandlerFunc{
 			//}
 		}
 		log.Print("get token: ", token)
-x
-		/*
-		//检验ip地址是否与登录时的ip地址一致
-		user_ip := c.ClientIP();
-		fmt.Println(user_ip)
-		if a_model.CheckIPAndTokeninASystem(user_ip, token) == false{
-			c.JSON(http.StatusOK, gin.H{
-				"status": -1,
-				"msg":    "A系统内，IP地址与登录地点不符，请重新登录",
-			})
-			c.Abort()
-			c.Redirect(302,"http://127.0.0.1:8081/login")
-			return
-		}
-
-		 */
 
 		j := controller.NewJWT()
 		//解析token包含的信息
@@ -79,8 +63,8 @@ x
 			return
 		}
 		c.Set("claims", claims)
-
 	}
+
 }
 
 //通过sub_token解析用户信息，sub_token类似于service ticket，被认证有效后给予用户信息
@@ -90,6 +74,8 @@ func AGet(c * gin.Context) {
 		sub_token := c.Query("sub_token")
 		a_model.ConnectRedis()
 		a_model.SetTokeninASystem(sub_token, user_claims)
+		ip := c.ClientIP();
+		a_model.SetTokenIPinASystem(ip, sub_token)
 
 		c.HTML(http.StatusOK, "a.html", gin.H{"title": "a测试页"})
 	}
@@ -101,10 +87,10 @@ func APost (c * gin.Context){
 		fmt.Println(err)
 		c.JSON(http.StatusNotFound, gin.H{"code": 0, "message":"获取密钥过程发生错误，请检查登录信息"})
 	}
-	//这里缺少验证ip的部分 稍后添加
-
-	//
-	data := controller.RequestUserInfo(token)
+	//获取客户端ip，调用用户数据需要验证用户的ip地址
+	ip := c.ClientIP();
+	//先假设这个功能需求用户ip
+	data := controller.RequestUserInfo(ip, token)
 	fmt.Println(data)
 	c.JSON(http.StatusOK, gin.H{"code": 0, "UserInfo": data})
 }

@@ -34,20 +34,6 @@ func SetTokeninASystem(token string, user *controller.UserClaims){
 	fmt.Println(v)
 }
 
-func GetTokenAndUsername(token string) string{
-	if c == nil {
-		return "false";
-	}
-	c.Do("SELECT", 1)
-	v, err := redis.String(c.Do("GET",token))
-	if err != nil {
-		fmt.Println(err)
-		return "false"
-	}
-	return v;
-}
-
-
 func CheckToken(token string) bool{
 	if c == nil{
 		return false

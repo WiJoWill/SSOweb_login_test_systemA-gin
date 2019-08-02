@@ -15,6 +15,5 @@ func InitRouter() *gin.Engine {
 		router.GET("/", a_controller.AGet)
 		router.POST("/", a_controller.APost)
 	}
-
 	return router;
 }
